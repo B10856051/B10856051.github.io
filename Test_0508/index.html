@@ -31,7 +31,7 @@
             text-align: center
         }
         
-        .td-noborder {
+        .td_noborder {
             border-width: 0px;
         }
         
@@ -63,19 +63,19 @@
         for (y = 0; y <= 7; y++) {
             document.write("<tr>");
             for (x = 0, a = 0; a <= 5; x += 50, a++) {
-                if (y == 0 && x == 0) { //最左上那格
+                if (y == 0 && x == 0) { 
                     document.write("<td class='td_noBorder'>");
                     document.write("</td>");
-                } else if (y == 0 && x != 5) { //第一排2~6格
+                } else if (y == 0 && x != 5) { 
                     document.write("<td id='tableTitle'>");
                     document.write('套餐' + a + '<br>' + x + '元');
                     document.write("</td>");
                 } else {
-                    if (x == 0) { //第2~8排第一格
+                    if (x == 0) { 
                         document.write("<td id='tableTitle'>");
                         document.write(y);
                         document.write("</td>");
-                    } else { //中間綠字&打折的部分
+                    } else { 
                         if ((x * y) % 300 == 0) {
                             document.write("<td class='redcontent'>");
                             document.write('原價：' + x * y + '<br>' + x * y * 0.8);
